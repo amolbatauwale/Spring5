@@ -1,6 +1,6 @@
 package com.nagpurit.amol;
 
-public class collage {
+public class College {
 	
 	public String cedu()
 	{

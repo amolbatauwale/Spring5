@@ -7,8 +7,32 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 	
+	<context:property-placeholder location="classpath:data.property"/> 
 	
-	<bean id="school" class="com.nagpurit.amol.School"></bean>
+	<bean id="myCollege" class="com.nagpurit.amol.College"></bean>
+
+	<bean id="myHighSchool" class="com.nagpurit.amol.HighSchool"></bean>
+
+
+
+<!-- 	School school = new School();
+	
+	school.setName("Somalwara Highschool")
+	
+	school.setCollge(myColleage)
+
+	school.setHighSchool(myHighSchool)
+ -->
+
+	<bean id="school" class="com.nagpurit.amol.School">
+	
+	<property name="name" value="${foo.name}"></property>
+
+	<property name="clg" ref="myCollege"></property>
+	
+	<property name="highSchool" ref="myHighSchool"></property>
+	
+	</bean>
 	
 	
 	
